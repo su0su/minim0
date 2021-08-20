@@ -1,3 +1,3 @@
 # minim0
 web site
-hihi
+mo is ready
