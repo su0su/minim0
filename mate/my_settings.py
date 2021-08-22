@@ -17,3 +17,7 @@ NAVER = {
         "CLIENT_ID":"yNz2rAgBD7KMMfeVeL7C",
         "CLIENT_SECRET":"ITIJHWfc25"
 }
+
+LAST = {
+    "API_KEY" : "b180e491c848a9dbd0832476d8bdc603"
+}
