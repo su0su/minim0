@@ -1,0 +1,17 @@
+<h1> 음악 검색 API</h1>
+<body>
+    <form action=" " method="GET">
+        <label for="songinfo">음악검색하기</label>
+        <input type="text"  name="q" placeholder="검색">
+        <input type="submit" value="검색">
+    </form>
+
+    <div>
+    {% for result in results %}
+        <ul>
+            <div>{{ forloop.counter }}
+               <img src="{{result.image}}" alt="" width="110" height="150"> : {{ result.url }} 
+        </ul>
+    {% endfor %}
+  </div>
+</body>
