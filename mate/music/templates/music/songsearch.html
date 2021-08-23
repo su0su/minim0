@@ -10,7 +10,7 @@
     {% for result in results %}
         <ul>
             <div>{{ forloop.counter }}
-               <img src="{{result.image}}" alt="" width="110" height="150"> : {{ result.url }} 
+               <img src="{{result.url}}" alt="" width="110" height="150"> : {{ result.name }} : {{ result.url }} 
         </ul>
     {% endfor %}
   </div>
