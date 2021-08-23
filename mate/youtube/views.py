@@ -3,14 +3,19 @@ from django.shortcuts import render, redirect
 from isodate import parse_duration
 import my_settings
 import requests
+from django.contrib import auth
 
 # Create your views here.
 def show(request):
     return render(request, 'result.html')
     #return HttpResponse("Hello, world. You're at the polls index.")
 
+
+
 def youtube(request):
     videos = []
+
+
 
     if request.method == 'POST':
         search_url = 'https://www.googleapis.com/youtube/v3/search'
@@ -36,6 +41,9 @@ def youtube(request):
         if request.POST['submit'] == 'lucky' :
             return redirect(f'https://www.youtube.com/watch?v={ video_ids[0] }')
 
+        if request.POST['submit'] == 'logout':
+            auth.logout(request)
+            return redirect('/start')
 
         video_params = {
             'key' : my_settings.YOUTUBE_API['YOUTUBE_API_KEY'],

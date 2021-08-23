@@ -24,7 +24,6 @@ YOUTUBE_DATA_API_KEY = my_settings.YOUTUBE_API
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -35,6 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'corsheaders',
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'movie',
     'youtube',
+    'start',
 ]
 
 MIDDLEWARE = [
