@@ -24,8 +24,6 @@ def validate_pw(pw):
 def index(request):
     return render(request, 'hello.html')
 
-def login(request):
-    return render(request, 'login.html')
 
 def signup(request):#회원가입
     if request.method == 'POST':
@@ -41,6 +39,8 @@ def signup(request):#회원가입
     return render(request, 'signup.html')
 
 def login(request):
+    if request.user.is_authenticated:
+        return redirect("/youtube")
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']

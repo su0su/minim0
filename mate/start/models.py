@@ -49,6 +49,7 @@ class AuthUser(models.Model):
     is_staff = models.IntegerField()
     is_active = models.IntegerField()
     date_joined = models.DateTimeField()
+    keyword = models.IntegerField(blank=True, null=True)
 
     class Meta:
         managed = False
@@ -120,13 +121,3 @@ class DjangoSession(models.Model):
     class Meta:
         managed = False
         db_table = 'django_session'
-
-
-class TestMember(models.Model):
-    email = models.CharField(max_length=32)
-    password = models.CharField(max_length=128)
-    nickname = models.CharField(max_length=12)
-
-    class Meta:
-        managed = False
-        db_table = 'test_member'

@@ -6,5 +6,6 @@ urlpatterns = [
     path('', index, name='start'),
     path('signup/', signup, name='signup'),
     path('login/', login, name='login'),
+    path('main/', login, name='main'),
     
 ]

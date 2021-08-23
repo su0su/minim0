@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by subin1107</title>
+  <link rel="stylesheet" href="{% static 'style.css'%}">
+  <link rel="stylesheet" href="{% static 'bootstrap.css'%}">
+<!-- Bootstrap core CSS -->
+<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+  <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+  </style>
+
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="slide_wrapper">
+  <ul class="slides">
+
+    <li><img src=src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
+    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
+    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
+    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
+    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
+    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
+    </li>
+    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
+    </li>
+    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
+    </li>
+    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
+    </li>
+    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
+    </li>
+
+  </ul>
+</div>
+<p class="controls">
+  <span class="prev"> prev</span>
+  <span class="next"> next</span>
+</p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="mvslide_wrapper">
+  <ul class="mvslides">
+    {% for video in videos %}
+        <li><img src={{ video.thumbnail }} width="300px" alt=""></li>
+    {% endfor %}
+
+  </ul>
+</div>
+<p class="mvcontrols">
+  <span class="mvprev"> prev</span>
+  <span class="mvnext"> next</span>
+</p>
+</div>
+<!-- partial -->
+<script src="{% static "script.js"%}"></script>
+
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Search YouTube</h1>
+      <p class="lead text-muted">Get the top nine results on YouTube for your query!</p>
+      <form method="POST">
+      <div class="input-group mb-3">
+          {% csrf_token %}
+          <input type="text" name="search" class="form-control" aria-label="Username">
+      </div>
+      <p>
+        <button type="submit" name="submit" value="search" class="btn btn-primary my-2">YouTube Search</button>
+        <button type="submit" name="submit" value="lucky" class="btn btn-secondary my-2">I'm Feeling Lucky</button>
+        <button type="submit" name="submit" value="logout" class="btn btn-secondary my-2">Logout</button>
+      </p>
+      </form>
+    </div>
+  </section>
+  
+
+</main>
+
+</body>
+</html>
+

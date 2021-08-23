@@ -5,9 +5,7 @@
 #   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
-from django.contrib.auth.forms import UsernameField
 from django.db import models
-from django.db.models.fields import EmailField
 
 
 class AuthGroup(models.Model):
@@ -51,6 +49,7 @@ class AuthUser(models.Model):
     is_staff = models.IntegerField()
     is_active = models.IntegerField()
     date_joined = models.DateTimeField()
+    keyword = models.IntegerField(blank=True, null=True)
 
     class Meta:
         managed = False
@@ -122,15 +121,3 @@ class DjangoSession(models.Model):
     class Meta:
         managed = False
         db_table = 'django_session'
-
-
-class TestMember(models.Model):
-
-    
-    email = models.CharField(max_length=32, unique=True)
-    password = models.CharField(max_length=128)
-    nickname = models.CharField(max_length=12)
-
-    class Meta:
-        managed = False
-        db_table = 'test_member'
