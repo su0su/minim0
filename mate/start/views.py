@@ -44,12 +44,13 @@ def login(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
+        print(username, password)
 
         user = auth.authenticate(request, username=username, password=password)
 
         if user is not None :
             auth.login(request, user)
-            return redirect('/youtube')
+            return redirect('/home')
         else :
             return render(request, 'login.html', {'error' : 'username or password is incorrect'})
     else :
@@ -57,7 +58,7 @@ def login(request):
 
 
 def logout(request):
-    if request.method == "POSt":
+    if request.method == "POST":
         auth.logout(request)
         return redirect("./")
     return render(request, 'login.html')

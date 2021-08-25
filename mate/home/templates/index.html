@@ -28,25 +28,17 @@
 </head>
 
 <body>
+
+
+
 <!-- partial:index.partial.html -->
 <div class="slide_wrapper">
   <ul class="slides">
 
-    <li><img src=src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
-    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
-    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
-    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
-    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt=""></li>
-    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
-    </li>
-    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
-    </li>
-    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
-    </li>
-    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
-    </li>
-    <li><img src="https://w.namu.la/s/912bde0c4a0b2e7be286896a157e86968e1a1ae608278451f7a6f6f10cb86f537e7e334d71237ec6052808d189b8586f61b4afa8e4d301dbeb7cc45d774a72a19d378e3dbe58bfc628a6f80d70be6c9ad608dc0e77c60a532f4020306e5d02ad" width="300px" alt="">
-    </li>
+    {% for movie in movies %}
+        <li><div class="item"><img src={{ movie.image }} width="300px" alt=""><br><p>
+        {{movie.title}}</div></li>
+    {% endfor %}
 
   </ul>
 </div>
@@ -64,8 +56,10 @@
 <div class="mvslide_wrapper">
   <ul class="mvslides">
     {% for video in videos %}
-        <li><img src={{ video.thumbnail }} width="300px" alt=""></li>
+        <li><div class="item"><img src={{ video.thumbnail }} width="300px" alt=""><br><p>
+        {{video.title}}</div></li>
     {% endfor %}
+    
 
   </ul>
 </div>
@@ -74,6 +68,33 @@
   <span class="mvnext"> next</span>
 </p>
 </div>
+
+
+<br>
+<br>
+<br>
+
+
+<div class="msslide_wrapper">
+  <ul class="msslides">
+    {% for video in videos %}
+        <li><div class="item"><img src={{ video.thumbnail }} width="300px" alt=""><br><p>
+        {{video.title}}</div></li>
+    {% endfor %}
+    
+
+  </ul>
+</div>
+<p class="mscontrols">
+  <span class="msprev"> prev</span>
+  <span class="msnext"> next</span>
+</p>
+</div>
+
+
+
+
+
 <!-- partial -->
 <script src="{% static "script.js"%}"></script>
 

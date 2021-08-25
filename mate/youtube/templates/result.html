@@ -24,7 +24,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <!--<link href="{% static 'album.css' %}" rel="stylesheet">-->
+    <link href="{% static 'album.css' %}" rel="stylesheet">
   </head>
   <body>
 
@@ -51,17 +51,17 @@
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
-        {% for video in videos %}
+        {% for result in results %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{ video.thumbnail }}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img>
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{result.thumbnail}}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img> 
             <div class="card-body">
-              <p class="card-text">{{ video.title }}</p>
+              <p class="card-text">{{ result.title }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a type="button" href="{{ video.url }}" class="btn btn-sm btn-outline-secondary">View</a>
+                  <a type="button" href="{{ result.url }}" class="btn btn-sm btn-outline-secondary">View</a>
                 </div>
-                <small class="text-muted">{{ video.duration }} mins</small>
+                <small class="text-muted">{{ result.duration }} mins</small>
               </div>
             </div>
           </div>

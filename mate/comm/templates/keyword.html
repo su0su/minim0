@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+   <head>
+      <title>Eventually by HTML5 UP</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="{% static "css/keyword.css"%}">
+   </head>
+   <body class="is-preload">
+
+      <!-- Header -->
+         <header>
+            <h1>MATE</h1>
+            <p>당신의 키워드를 골라주세요</p>
+            
+            <p>> 활동</p>
+            <form action="" method="post">
+            {% csrf_token %}
+            <div id="ck-button">
+               <label><input type="checkbox" name="keyword[]" id="1" value="1"><span>공부</span></label>
+               <label><input type="checkbox" name="keyword[]" id="2" value="2"><span>운동</span></label>
+               <label><input type="checkbox" name="keyword[]" id="3" value="3"><span>여행</span></label>
+               <label><input type="checkbox" name="keyword[]" id="4" value="4"><span>드라이브</span></label>
+               <label><input type="checkbox" name="keyword[]" id="5" value="5"><span>카페</span></label>
+               <label><input type="checkbox" name="keyword[]" id="6" value="6"><span>지하철</span></label>
+               <label><input type="checkbox" name="keyword[]" id="7" value="7"><span>공항</span></label>
+               <label><input type="checkbox" name="keyword[]" id="8" value="8"><span>라운지</span></label>
+               <label><input type="checkbox" name="keyword[]" id="9" value="9"><span>한강</span></label>
+               <label><input type="checkbox" name="keyword[]" id="10" value="10"><span>바다</span></label>
+               <label><input type="checkbox" name="keyword[]" id="10" value="11"><span>노래방</span></label>
+               <label><input type="checkbox" name="keyword[]" id="11" value="12"><span>클럽</span></label>
+               <label><input type="checkbox" name="keyword[]" id="12" value="13"><span>매장</span></label>
+             <button type="submit">저장</button>
+            
+            
+            <p>> 장르</p>
+
+            <p>> 감정</p>
+            <p>> 계절, 날씨, 시간</p>
+            <p>> 감성</p>
+            <p>> 기타</p>
+            <p>> MBTI</p>
+               <input type="reset" value="Reset"> 
+            </div>
+
+            
+
+
+         </header>

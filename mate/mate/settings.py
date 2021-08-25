@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'youtube',
     'start',
     'home',
+    'comm',
 ]
 
 MIDDLEWARE = [

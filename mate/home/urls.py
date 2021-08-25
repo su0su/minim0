@@ -1,11 +1,11 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from . import views
-from home.views import youtubeapi
+from home.views import api
 
 app_name = 'home'
 
 
 urlpatterns = [
-    path('', youtubeapi, name='home'),
+    path('', api, name='home'),
 ]
