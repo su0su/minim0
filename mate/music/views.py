@@ -35,6 +35,7 @@ def music(request):
         urllib.request.install_opener(opener)
 
         artist_url=[]
+        img=[]
         for i in range(0,len(results)):
             artist_url.append(results[i]['url'])
 
@@ -45,13 +46,16 @@ def music(request):
             try:
                 artist_img=result.find('span',{'class':'cover-art'}).find('img')
                 path=artist_img.get("src") # 파일 경로
-                results[i]['url'] = path
+                results[i]['image'] = path
             except:
                 pass
 
+        print(type(results))    
+        print(type(img))
+        print(len(img))
 #songsearch.html로 값 전달
         context = {
-            'results': results
+            'results': results,
         }
-
+        print("보냈음")
         return render(request, 'music/songsearch.html', context=context)

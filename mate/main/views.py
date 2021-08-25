@@ -6,5 +6,12 @@ from django.template import loader
 def main(request):  
     return render(request,'main/login.html')
 
-def join(request):
+def join(request):  
     return render(request,'main/join.html')
+
+def keyword(request):
+    if request.method == 'POST':
+        selected = request.POST.getlist('keyword[]')
+        print(selected)
+
+    return render(request,'main/keyword.html')
