@@ -18,22 +18,24 @@
 	<body class="is-preload">
 		<!-- Introduce -->
 		<!-- Header -->	
-		<!--main2--><section id="banner">
+<!--main2-->
+		<section id="banner">
 		<!--main1-->
-		<header id="header">
-				<h1>Mate,</h1>
-				<p>Make your Mate<p>
-				<p>Share Your Taste</p>
-		</header>
+			<header id="header">
+					<h1>Mate,</h1>
+					<p>Make your Mate<p>
+					<p>Share Your Taste</p>
 
-		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
-				<input type="email" name="email" id="email" placeholder="Email Address" />
-				<input type="password" name="pwd" id="pwd" placeholder="Password" />
-				<input type="submit" value="Login" />
-			</form>
-			</div>
-			<a href="{% url 'main:join' %}">JOIN</a>
+			</header>
+
+			<!-- Signup Form -->
+				<form id="signup-form" method="post" action="{% url "main:success"%}">
+				{% csrf_token %}
+					<input type="text" name="login[]" id="username" placeholder="User Name" />
+					<input type="password" name="login[]" id="pwd" placeholder="Password" />
+					<button type="submit">Login</button>
+				</form>
+				<a href="{% url 'main:join' %}">JOIN</a>
 		</section>
 
 
@@ -60,20 +62,6 @@
 					</div>
 				</section>
 			</section>
-
-
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
 
 		<!-- Scripts -->
 			<script src="{% static "js/main.js"%}"></script>

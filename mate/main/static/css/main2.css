@@ -2430,7 +2430,7 @@ input, select, textarea {
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
-		overflow: hidden;
+		overflow: auto;
 		text-overflow: ellipsis;
 	}
 
@@ -3566,7 +3566,7 @@ input, select, textarea {
 		cursor: default;
 		/* height: 100vh; */
 		min-height: 35em;
-		overflow: hidden;
+		overflow: auto;
 		position: relative;
 		/* text-align: center; */
 	}
@@ -3584,7 +3584,8 @@ input, select, textarea {
 			font-size: 1.75em;
 			opacity: 1;
 			padding: 0.35em 1em;
-			position: relative;
+			position: absolute;
+			overflow-x: auto;
 			z-index: 1;
 		}
 
@@ -3648,7 +3649,7 @@ input, select, textarea {
 			opacity: 1;
 			outline: 0;
 			padding-left: 0.225em;
-			position: absolute;
+			position:absolute;
 			text-align: center;
 			text-transform: uppercase;
 			width: 16em;
@@ -3695,8 +3696,8 @@ input, select, textarea {
 
 			#banner {
 				padding: 7em 3em 5em 3em ;
-				/* height: auto;
-				min-height: 0; */
+				/* height: auto;*/
+				min-height: 0; 
 			}
 
 				#banner h2 {

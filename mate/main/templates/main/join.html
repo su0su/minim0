@@ -20,11 +20,13 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
-				<input type="text" name="name" id="name" placeholder="이름" />
-                <input type="password" name="pwd" id="pwd" placeholder="비밀번호" />
-                <input type="email" name="email" id="email" placeholder="Email Address" />
-				<input type="submit" value="Sign Up" />
+			<form id="signup-form" method="post" action="{% url "main:joinsuccess"%}" >
+				{% csrf_token %}
+				<input type="text" name="join[]" id="name" placeholder="이름" />
+                <input type="password" name="join[]" id="pwd" placeholder="비밀번호" />
+				<input type="password" name="join[]" id="pwdcheck" placeholder="비밀번호 확인" />
+                <input type="email" name="join[]" id="email" placeholder="Email Address" />
+				<button type="submit">Sing up</button>
 			</form>
 
 		<!-- Footer -->

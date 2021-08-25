@@ -78,12 +78,12 @@ html {
   box-sizing: inherit; }
 
 html, body {
-  height: 100%;
-  overflow-x: hidden;
+  /* height: 100%; */
+  overflow-x: auto;
   width: 100%; }
   @media screen and (max-height: 640px) {
     html, body {
-      height: auto;
+      /* height: auto; */
       min-height: 100%; } }
 
 body {
