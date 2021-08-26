@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<html>
+<div class="html">
+    <head>
+
+        <title>community</title>
+         <script language="javascript">
+
+          function printName()  {
+            const search = document.getElementById('search').value;
+            document.getElementById("result").innerText = search;
+            }   
+               
+           
+        function getMenu(event) {
+         document.getElementById('result2').innerText = 
+            event.target.value;
+          
+        }
+
+              
+                 
+        </script>
+        <link rel="stylesheet" href="{% static './style.css' %}">
+                }
+    </head>
+
+    <header id="header">
+  <h1 id="logo"><a href="index.html">Mate.</a></h1>
+  <nav id="nav">
+    <ul>
+      <li><a href="recommand.html">사용자 추천</a></li>
+      <li><a href="#">Community</a>
+        <ul>
+          <li><a href="collecttaste.html">collect your taste</a></li>
+          <li><a href="sharetaste.html">share your taste</a></li>
+          <ul>
+            <li><a href="#">Option 1</a></li>
+            <li><a href="#">Option 2</a></li>
+          </ul>
+      </ul>
+      </li>
+   
+
+    </li>
+  
+      <li><a href="#" class="button primary">My page</a></li>
+      </ul>
+  </nav>
+</header>
+
+
+    <body>
+        <div class="happy">
+         <h1>upload</h1>
+        </div>
+
+        <div class="aa">
+           <div class="Title" >
+                <p>Title :
+                &nbsp;     
+           <input type="text" name="title" placeholder="Write Your Playlist Title" style=" width: 70%; height:2.5%;font-size:20px;">
+               &nbsp;  <br><br> 
+
+               <div class="search">
+           <div class="radio">
+             <input type='radio' checked="checked"
+            name='menu' 
+            value='music' 
+            onclick='getMenu(event)'/>music
+                <input type='radio' 
+             name='menu' 
+            value='youtube' 
+             onclick='getMenu(event)'/>youtube
+
+              <input type='radio' 
+             name='menu' 
+            value='movie' 
+             onclick='getMenu(event)'/>movie
+                <div id='result2'>
+                    </div>
+                </div>
+            </div>
+
+<br>
+
+            <input type="text" name="search" id='search' style=" width: 90%; height:2.5%;font-size:20px;" onkeyup='printName()'/>
+                <div id='result'></div>
+
+                <br><br><br>
+           
+
+           <input type="button" onclick="showPopup();" class="img-button" value="search" style=" font-size:75%">
+           <div class="result1"></div>
+
+
+            </div>
+
+
+<head>
+  <title>Document</title>
+  <script language="javascript">
+  function showPopup() { window.open("result", "a", "width=2000, height=800, left=100, top=50"); }
+  </script>
+</head>
+
+
+        </div>
+        </div>
+   <!-- partial -->
+  <script  src="{%static 'js/script.js' %}"></script>
+</div>
+</div>
+
+</body>
+</html>

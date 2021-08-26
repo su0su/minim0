@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by subin1107</title>
+  <link rel="stylesheet" href={% static "css/style.css"%}>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <header id="header">
+  <h1 id="logo"><a href="index.html">Mate.</a></h1>
+  <nav id="nav">
+    <ul>
+      <li><a href="recommand.html">사용자 추천</a></li>
+      <li>
+        <a href="#">Community</a>
+        <ul>
+          <li><a href="collecttaste.html">collect your taste</a></li>
+          <li><a href="sharetaste.html">share your taste</a></li>
+          <li>
+          <a href="#">Submenu</a>
+          <ul>
+            <li><a href="#">Option 1</a></li>
+            <li><a href="#">Option 2</a></li>
+          </ul>
+      </li>
+    </ul>
+
+    </li>
+      <li><a href="#" class="button primary">My page</a></li>
+      </ul>
+  </nav>
+</header>
+<!-- partial:index.partial.html -->
+<div class="all">
+ <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Search YouTube</h1>
+      <p class="lead text-muted">Get the top nine results on YouTube for your query!</p>
+      <form method="POST">
+      <div class="input-group mb-3">
+          {% csrf_token %}
+          <input type="text" name="search" class="form-control" aria-label="Username">
+      </div>
+      <p>
+        <button type="submit" name="submit" value="search" class="btn btn-primary my-2">YouTube Search</button>
+        <button type="submit" name="submit" value="lucky" class="btn btn-secondary my-2">I'm Feeling Lucky</button>
+        <button type="submit" name="submit" value="logout" class="btn btn-secondary my-2">Logout</button>
+      </p>
+      </form>
+    </div>
+  </section>
+<div class="slide_wrapper">
+  <ul class="slides">
+
+    {% for video in videos_music %}
+        <li><div class="item"><img src={{ video.thumbnail }} width="300px" alt=""><br><p>
+        
+    {% endfor %}
+   
+  </ul>
+</div>
+<p class="controls">
+  <span class="prev"> prev</span>
+  <span class="next"> next</span>
+</p>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="msslide_wrapper">
+  <ul class="msslides">
+    {% for video in videos_music %}
+        <li><div class="item"><img src={{ video.thumbnail }} width="300px" alt=""><br><p>
+        
+    {% endfor %}
+   
+  </ul>
+</div>
+<p class="mscontrols">
+  <span class="msprev"> prev</span>
+  <span class="msnext"> next</span>
+</p>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="mvslide_wrapper">
+  <ul class="mvslides">
+    {% for movie in movies %}
+        <li><div class="item"><img src={{ movie.image }} width="300px" alt=""><br><p>
+        
+    {% endfor %}
+   
+
+  </ul>
+</div>
+<p class="mvcontrols">
+  <span class="mvprev"> prev</span>
+  <span class="mvnext"> next</span>
+</p>
+</div>
+</div>
+<!-- partial -->
+  <script  src="{% static "js/script.js"%}"></script>
+</body>
+</html>

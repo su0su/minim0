@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<div class="html">
+    <head>
+
+        <title>community</title>
+        <script language="javascript">
+               
+
+        function getMenu(event) {
+            document.getElementById('result').innerText = 
+            event.target.value;
+}
+                 
+        </script>
+       
+        <link rel="stylesheet" href={% static "css/style.css" %}>
+    </head>
+
+    <header id="header">
+  <h1 id="logo"><a href="index.html">Mate.</a></h1>
+  <nav id="nav">
+    <ul>
+      <li><a href="recommand.html">사용자 추천</a></li>
+      <li>
+        <a href="#">Community</a>
+        <ul>
+          <li><a href="collecttaste.html">collect your taste</a></li>
+          <li><a href="sharetaste.html">share your taste</a></li>
+          <li>
+          <a href="#">Submenu</a>
+          <ul>
+            <li><a href="#">Option 1</a></li>
+            <li><a href="#">Option 2</a></li>
+          </ul>
+      </li>
+    </ul>
+
+    </li>
+      <li><a href="#" class="button primary">My page</a></li>
+      </ul>
+  </nav>
+</header>
+    <body>
+        
+        <ul id="pagingul">
+
+
+        <div class="list_wrap">
+
+
+            <div class="radio">
+             <input type='radio' checked="checked"
+            name='menu' 
+            value='music' 
+            onclick='getMenu(event)'/>music
+                <input type='radio' 
+             name='menu' 
+            value='youtube' 
+             onclick='getMenu(event)'/>youtube
+
+              <input type='radio' 
+             name='menu' 
+            value='movie' 
+             onclick='getMenu(event)'/>movie
+             <div class="plus"><h1><a href="upload.html">+</h1></div>
+                <div id='result'>
+
+                    </div>
+                </div>
+            <ul>
+                <li class="item"><a href="playlist.html">
+                    <div class="image">
+                        <img src="https://ibighit.com/bts/images/bts/discography/love_yourself-answer/album-cover.jpg" width="300px" ></a></div>
+                        <div class="cont">
+                        <strong>제목 </strong>
+                        <p>내용</p>
+                        <div class ="tag">태그</div>
+                    </div>
+
+                </li>
+
+                <li class="item"><a href="playlist.html">
+                    <div class="image">
+                        <img src="https://ibighit.com/bts/images/bts/discography/love_yourself-answer/album-cover.jpg" width="300px" ></a></div>
+                        <div class="cont">
+                        <strong>제목</strong>
+                        <p>내용</p>
+                        <div class ="tag">태그</div>
+                    </div>
+
+                </li> 
+
+                 <li class="item"><a href="playlist.html">
+                    <div class="image">
+                        <img src="https://ibighit.com/bts/images/bts/discography/love_yourself-answer/album-cover.jpg" width="300px" ></a></div>
+                        <div class="cont">
+                        <strong>제목</strong>
+                        <p>내용</p>
+                        <div class ="tag">태그</div>
+                    </div>
+
+                </li> 
+
+                 <li class="item"><a href="playlist.html">
+                    <div class="image">
+                        <img src="https://ibighit.com/bts/images/bts/discography/love_yourself-answer/album-cover.jpg" width="300px" ></a></div>
+                        <div class="cont">
+                        <strong>제목</strong>
+                        <p>내용</p>
+                        <div class ="tag">태그</div>
+                    </div>
+
+                </li> 
+
+                 <li class="item"><a href="playlist.html">
+                    <div class="image">
+                        <img src="https://ibighit.com/bts/images/bts/discography/love_yourself-answer/album-cover.jpg" width="300px" ></a></div>
+                        <div class="cont">
+                        <strong>제목</strong>
+                        <p>내용</p>
+                        <div class ="tag">태그</div>
+                    </div>
+
+                </li> 
+
+                 <li class="item"><a href="playlist.html">
+                    <div class="image">
+                        <img src="https://ibighit.com/bts/images/bts/discography/love_yourself-answer/album-cover.jpg" width="300px" ></a></div>
+                        <div class="cont">
+                        <strong>제목</strong>
+                        <p>내용</p>
+                        <div class ="tag">태그</div>
+                    </div>
+
+                </li> 
+
+
+
+
+            </ul>
+            
+        </div>
+     
+</ul>
+
+    </body>
+    </html>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>Eventually by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static "css/joinmain.css"%}">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>MATE</h1>
+			</header>
+
+		<!-- Signup Form -->
+			<form id="signup-form" method="post" action="{% url "start:join"%}" >
+				{% csrf_token %}
+				<input type="text" name="username" id="username" placeholder="username" />
+                <input type="password" name="pwd" id="pwd" placeholder="password" />
+				<input type="password" name="pwdcheck" id="pwdcheck" placeholder="check password" />
+                {% if messages %}
+				<ul class="messages">
+					{% for message in messages %}
+					<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+				<input type="email" name="email" id="email" placeholder="Email Address" />
+				
+				<button type="submit">Next</button>
+			</form>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static "js/main.js"%}"></script>
+
+	</body>
+</html>

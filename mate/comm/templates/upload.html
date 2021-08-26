@@ -1,0 +1,87 @@
+<html>
+<div class="html">
+    <head>
+
+        <title>community</title>
+         <script language="javascript">
+               
+             function getMenu(event) {
+                document.getElementById('result').innerText = 
+                 event.target.value;
+                }
+                 
+        </script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <header id="header">
+  <h1 id="logo"><a href="index.html">Mate.</a></h1>
+  <nav id="nav">
+    <ul>
+      <li><a href="recommand.html">사용자 추천</a></li>
+      <li><a href="#">Community</a>
+        <ul>
+          <li><a href="collecttaste.html">collect your taste</a></li>
+          <li><a href="sharetaste.html">share your taste</a></li>
+          <ul>
+            <li><a href="#">Option 1</a></li>
+            <li><a href="#">Option 2</a></li>
+          </ul>
+      </li>
+    </ul>
+
+    </li>
+  
+      <li><a href="#" class="button primary">My page</a></li>
+      </ul>
+  </nav>
+</header>
+    <body>
+        <div class="happy">
+         <h1>upload</h1>
+        </div>
+
+        <div class="aa">
+           <div class="Title" >
+                <p>Title :
+                &nbsp;     
+           <input type="text" name="title" placeholder="입력하세요" style=" width: 70%; height:2.5%;font-size:20px;">
+               &nbsp;   
+
+           <input type="button" onclick="showPopup();" class="img-button" value="search" style=" font-size:75%">
+
+
+           </p>
+          
+            <div class="radio">
+             <input type='radio'
+            name='menu' 
+            value='music' 
+            onclick='getMenu(event)'/>music
+                <input type='radio' 
+             name='menu' 
+            value='youtube' 
+             onclick='getMenu(event)'/>youtube
+
+              <input type='radio' 
+             name='menu' 
+            value='movie' 
+             onclick='getMenu(event)'/>movie
+                <div id='result'>
+                    </div>
+                </div>
+
+
+<head>
+  <title>Document</title>
+  <script language="javascript">
+  function showPopup() { window.open("result.html", "a", "width=1000, height=600, left=100, top=50"); }
+  </script>
+</head>
+
+
+        </div>
+        </div>
+    </body>
+    </html>
+</html>
