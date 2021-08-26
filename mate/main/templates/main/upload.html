@@ -189,3 +189,10 @@
     <h1> {{profile.media}} </h1>
     <h1> {{profile.url}} </h1>
     <br><br>
+
+    {% if profile.image %}
+    <div >
+        <span>첨부파일 :&nbsp;</span>
+        <a href="{% url 'main:download' %}" >다운로드</a>
+    </div>
+    {% endif %}

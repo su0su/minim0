@@ -13,4 +13,5 @@ urlpatterns = [
     path('joinsuccess/', views.joinsuccess, name='joinsuccess'),
     path('upload/', views.upload, name='upload'),
     path('profile/', views.upload_create, name='upload_create'),
+    path('download/',views.download,name="download")
 ] 

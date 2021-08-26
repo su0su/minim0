@@ -1,11 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.template import loader
 from .models import Upload
 from django.views.decorators.csrf import csrf_exempt
-import urllib
-import os
-from django.http import HttpResponse, Http404
-import mimetypes
+from django.http import HttpResponse
+import urllib.request
 
 # Create your views here.
 def main(request):  
@@ -58,7 +56,15 @@ def upload_create(request):
         'media':form.media,
         'url':form.url
     }
-    print(context)
 
     return render(request,'main/upload.html',{'profile':context})
 
+def download(request):
+    # form=Upload()
+    # url=form.image.url
+    testurl="http://news.samsungdisplay.com/wp-content/uploads/2018/08/8.jpg"
+
+    #download
+    urllib.request.urlretrieve(testurl,"test22.jpg")
+    return render(request,'main/upload.html',)
+    
