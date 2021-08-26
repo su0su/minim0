@@ -1,0 +1,191 @@
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static "css/upload.css"%}">
+    
+	</head>
+    <form method="POST" action="{% url "main:upload_create"%}" enctype="multipart/form-data">
+    {% csrf_token %}
+        <input type="text" name="title" value="title" placeholder="title" />
+        <input type="url" name="url" value="url" placeholder="url" />
+        <input type="file" name="image" id="image" />
+
+        <label class="nav_btn" for="opener">#활동</label>
+        <input class="opener" type="checkbox" id="opener">
+        <div class="nav_item">
+            <div id="ck-button">
+            <label><input type="checkbox" name="keyword[]" id="1" value="1"><span>공부</span></label>
+            <label><input type="checkbox" name="keyword[]" id="2" value="2"><span>운동</span></label>
+            <label><input type="checkbox" name="keyword[]" id="3" value="3"><span>여행</span></label>
+            <label><input type="checkbox" name="keyword[]" id="4" value="4"><span>드라이브</span></label>
+            <label><input type="checkbox" name="keyword[]" id="5" value="5"><span>카페</span></label>
+            <label><input type="checkbox" name="keyword[]" id="6" value="6"><span>지하철</span></label>
+            <label><input type="checkbox" name="keyword[]" id="7" value="7"><span>공항</span></label>
+            
+            <label><input type="checkbox" name="keyword[]" id="8" value="8"><span>라운지</span></label>
+            <label><input type="checkbox" name="keyword[]" id="9" value="9"><span>한강</span></label>
+            <label><input type="checkbox" name="keyword[]" id="10" value="10"><span>바다</span></label>
+            <label><input type="checkbox" name="keyword[]" id="11" value="11"><span>노래방</span></label>
+            <label><input type="checkbox" name="keyword[]" id="12" value="12"><span>클럽</span></label>
+            <label><input type="checkbox" name="keyword[]" id="13" value="13"><span>매장</span></label>
+            <label><input type="checkbox" name="keyword[]" id="14" value="14"><span>기차</span></label>
+            
+            <label><input type="checkbox" name="keyword[]" id="15" value="15"><span>비행기</span></label>
+            <label><input type="checkbox" name="keyword[]" id="16" value="16"><span>커피</span></label>
+            <label><input type="checkbox" name="keyword[]" id="17" value="17"><span>작업</span></label>
+            <label><input type="checkbox" name="keyword[]" id="18" value="18"><span>명상</span></label>
+            <label><input type="checkbox" name="keyword[]" id="19" value="19"><span>헬스</span></label>
+            <label><input type="checkbox" name="keyword[]" id="20" value="20"><span>혼술</span></label>
+            <label><input type="checkbox" name="keyword[]" id="21" value="21"><span>휴가</span></label>
+        </div>
+        </div>
+
+        <label class="nav_btn1" for="opener1">#장르</label>
+        <input class="opener1" type="checkbox" id="opener1">
+        <div class="nav_item1">
+        <div id="ck-button">
+            <label><input type="checkbox" name="keyword[]" id="22" value="22"><span>발라드</span></label>
+            <label><input type="checkbox" name="keyword[]" id="23" value="23"><span>힙합</span></label>
+            <label><input type="checkbox" name="keyword[]" id="24" value="24"><span>인디</span></label>
+            <label><input type="checkbox" name="keyword[]" id="25" value="25"><span>클래식</span></label>
+            <label><input type="checkbox" name="keyword[]" id="26" value="26"><span>록</span></label>
+            <label><input type="checkbox" name="keyword[]" id="27" value="27"><span>팝</span></label>
+            <label><input type="checkbox" name="keyword[]" id="28" value="28"><span>OST</span></label>
+            <label><input type="checkbox" name="keyword[]" id="29" value="29"><span>트로트</span></label>
+            <label><input type="checkbox" name="keyword[]" id="30" value="30"><span>블루스</span></label>
+            <label><input type="checkbox" name="keyword[]" id="31" value="31"><span>재즈</span></label>
+            <label><input type="checkbox" name="keyword[]" id="32" value="32"><span>댄스</span></label>
+            <label><input type="checkbox" name="keyword[]" id="33" value="33"><span>EDM</span></label>
+            <label><input type="checkbox" name="keyword[]" id="34" value="34"><span>뉴에이지</span></label>
+            <label><input type="checkbox" name="keyword[]" id="35" value="35"><span>알앤비</span></label>
+            <label><input type="checkbox" name="keyword[]" id="36" value="36"><span>CCM</span></label>
+            <label><input type="checkbox" name="keyword[]" id="37" value="37"><span>컨트리</span></label>
+            <label><input type="checkbox" name="keyword[]" id="38" value="38"><span>액션</span></label>
+            <label><input type="checkbox" name="keyword[]" id="39" value="39"><span>드라마</span></label>
+            <label><input type="checkbox" name="keyword[]" id="40" value="40"><span>애니메이션</span></label>
+            <label><input type="checkbox" name="keyword[]" id="41" value="41"><span>코미디</span></label>
+            <label><input type="checkbox" name="keyword[]" id="41" value="42"><span>범죄</span></label>
+            <label><input type="checkbox" name="keyword[]" id="43" value="43"><span>멜로</span></label>
+            <label><input type="checkbox" name="keyword[]" id="44" value="44"><span>로맨스</span></label>
+            <label><input type="checkbox" name="keyword[]" id="45" value="45"><span>어드벤쳐</span></label>
+            <label><input type="checkbox" name="keyword[]" id="46" value="46"><span>스릴러</span></label>
+            <label><input type="checkbox" name="keyword[]" id="47" value="47"><span>공포</span></label>
+            <label><input type="checkbox" name="keyword[]" id="48" value="48"><span>SF</span></label>
+            <label><input type="checkbox" name="keyword[]" id="49" value="49"><span>미스터리</span></label>
+            <label><input type="checkbox" name="keyword[]" id="50" value="50"><span>사극</span></label>
+            <label><input type="checkbox" name="keyword[]" id="51" value="51"><span>판타지</span></label>
+            <label><input type="checkbox" name="keyword[]" id="52" value="52"><span>가족</span></label>
+            <label><input type="checkbox" name="keyword[]" id="53" value="53"><span>전쟁</span></label>
+            <label><input type="checkbox" name="keyword[]" id="54" value="54"><span>뮤지컬</span></label>
+            <label><input type="checkbox" name="keyword[]" id="55" value="55"><span>다큐멘터리</span></label>
+            <label><input type="checkbox" name="keyword[]" id="56" value="56"><span>먹방</span></label>
+            <label><input type="checkbox" name="keyword[]" id="57" value="57"><span>게임</span></label>
+            <label><input type="checkbox" name="keyword[]" id="58" value="58"><span>제품리뷰</span></label>
+            <label><input type="checkbox" name="keyword[]" id="59" value="59"><span>사용법</span></label>
+            <label><input type="checkbox" name="keyword[]" id="60" value="60"><span>브이로그</span></label>
+            <label><input type="checkbox" name="keyword[]" id="61" value="61"><span>하울</span></label>
+            <label><input type="checkbox" name="keyword[]" id="62" value="62"><span>밈</span></label>
+            <label><input type="checkbox" name="keyword[]" id="63" value="63"><span>교육</span></label>		
+        </div></div>
+
+        <label class="nav_btn2" for="opener2">#감정</label>
+        <input class="opener2" type="checkbox" id="opener2">
+        <div class="nav_item2"><div id="ck-button">
+            <label><input type="checkbox" name="keyword[]" id="64" value="64"><span>기분전환</span></label>
+            <label><input type="checkbox" name="keyword[]" id="65" value="65"><span>힐링</span></label>
+            <label><input type="checkbox" name="keyword[]" id="66" value="66"><span>우울</span></label>
+            <label><input type="checkbox" name="keyword[]" id="67" value="67"><span>사랑</span></label>
+            <label><input type="checkbox" name="keyword[]" id="68" value="68"><span>추억</span></label>
+            <label><input type="checkbox" name="keyword[]" id="69" value="69"><span>분위기</span></label>
+            <label><input type="checkbox" name="keyword[]" id="70" value="70"><span>위로</span></label>
+            <label><input type="checkbox" name="keyword[]" id="71" value="71"><span>이별</span></label>
+            <label><input type="checkbox" name="keyword[]" id="72" value="72"><span>설렘</span></label>
+            <label><input type="checkbox" name="keyword[]" id="73" value="73"><span>센치</span></label>
+            <label><input type="checkbox" name="keyword[]" id="74" value="74"><span>포근한</span></label>
+            <label><input type="checkbox" name="keyword[]" id="75" value="75"><span>지친</span></label>
+            <label><input type="checkbox" name="keyword[]" id="76" value="76"><span>청량</span></label>
+        </div></div>
+
+        <label class="nav_btn3" for="opener3">#계절, 날씨, 시간</label>
+        <input class="opener3" type="checkbox" id="opener3">
+        <div class="nav_item3"><div id="ck-button">
+            <label><input type="checkbox" name="keyword[]" id="77" value="77"><span>봄</span></label>
+            <label><input type="checkbox" name="keyword[]" id="78" value="78"><span>여름</span></label>
+            <label><input type="checkbox" name="keyword[]" id="79" value="79"><span>가을</span></label>
+            <label><input type="checkbox" name="keyword[]" id="80" value="80"><span>겨울</span></label>
+            <label><input type="checkbox" name="keyword[]" id="81" value="81"><span>장마</span></label>
+            <label><input type="checkbox" name="keyword[]" id="82" value="82"><span>비오는날</span></label>
+            <label><input type="checkbox" name="keyword[]" id="83" value="83"><span>눈오는날</span></label>
+            <label><input type="checkbox" name="keyword[]" id="84" value="84"><span>새벽</span></label>
+            <label><input type="checkbox" name="keyword[]" id="85" value="85"><span>오후</span></label>
+            <label><input type="checkbox" name="keyword[]" id="86" value="86"><span>오전</span></label>
+            <label><input type="checkbox" name="keyword[]" id="87" value="87"><span>잠들기전</span></label>
+            <label><input type="checkbox" name="keyword[]" id="88" value="88"><span>7080</span></label>
+            <label><input type="checkbox" name="keyword[]" id="89" value="89"><span>퇴근</span></label>
+            <label><input type="checkbox" name="keyword[]" id="90" value="90"><span>출근</span></label>
+            <label><input type="checkbox" name="keyword[]" id="91" value="91"><span>등교</span></label>
+            <label><input type="checkbox" name="keyword[]" id="92" value="92"><span>햇살</span></label>
+        </div></div>
+
+        <label class="nav_btn4" for="opener4">#감성</label>
+        <input class="opener4" type="checkbox" id="opener4">
+        <div class="nav_item4"><div id="ck-button">
+            <label><input type="checkbox" name="keyword[]" id="93" value="93"><span>청춘</span></label>
+            <label><input type="checkbox" name="keyword[]" id="94" value="94"><span>음색</span></label>
+            <label><input type="checkbox" name="keyword[]" id="95" value="95"><span>인스타</span></label>
+            <label><input type="checkbox" name="keyword[]" id="96" value="96"><span>감성</span></label>
+            <label><input type="checkbox" name="keyword[]" id="97" value="97"><span>그루브</span></label>
+            <label><input type="checkbox" name="keyword[]" id="98" value="98"><span>몽환</span></label>
+            <label><input type="checkbox" name="keyword[]" id="99" value="99"><span>트렌디</span></label>
+            <label><input type="checkbox" name="keyword[]" id="100" value="100"><span>감각적인</span></label>
+        </div></div>
+
+        <label class="nav_btn5" for="opener5">#MBTI</label>
+        <input class="opener5" type="checkbox" id="opener5">
+        <div class="nav_item5"><div id="ck-button">
+            <label><input type="checkbox" name="keyword[]" id="107" value="107"><span>ENFP</span></label>
+            <label><input type="checkbox" name="keyword[]" id="108" value="108"><span>ENTP</span></label>
+            <label><input type="checkbox" name="keyword[]" id="109" value="109"><span>ENFJ</span></label>
+            <label><input type="checkbox" name="keyword[]" id="110" value="110"><span>ENTJ</span></label>
+            <label><input type="checkbox" name="keyword[]" id="111" value="111"><span>ESFP</span></label>
+            <label><input type="checkbox" name="keyword[]" id="112" value="112"><span>ESFJ</span></label>
+            <label><input type="checkbox" name="keyword[]" id="113" value="113"><span>ESTP</span></label>
+            <label><input type="checkbox" name="keyword[]" id="114" value="114"><span>ESTJ</span></label>
+            <label><input type="checkbox" name="keyword[]" id="115" value="115"><span>INFP</span></label>
+            <label><input type="checkbox" name="keyword[]" id="116" value="116"><span>INFJ</span></label>
+            <label><input type="checkbox" name="keyword[]" id="117" value="117"><span>INTP</span></label>
+            <label><input type="checkbox" name="keyword[]" id="118" value="118"><span>INTJ</span></label>
+            <label><input type="checkbox" name="keyword[]" id="119" value="119"><span>ISFP</span></label>
+            <label><input type="checkbox" name="keyword[]" id="120" value="120"><span>ISFJ</span></label>
+            <label><input type="checkbox" name="keyword[]" id="121" value="121"><span>ISTP</span></label>
+            <label><input type="checkbox" name="keyword[]" id="122" value="122"><span>ISTJ</span></label>
+        </div></div>
+
+        <label class="nav_btn6" for="opener6">#기타</label>
+        <input class="opener6" type="checkbox" id="opener6">
+        <div class="nav_item6"><div id="ck-button">
+            <label><input type="checkbox" name="keyword[]" id="101" value="101"><span>ASMR</span></label>
+            <label><input type="checkbox" name="keyword[]" id="102" value="102"><span>아이들</span></label>
+            <label><input type="checkbox" name="keyword[]" id="103" value="103"><span>여자</span></label>
+            <label><input type="checkbox" name="keyword[]" id="104" value="104"><span>남자</span></label>
+            <label><input type="checkbox" name="keyword[]" id="105" value="105"><span>커버</span></label>
+            <label><input type="checkbox" name="keyword[]" id="106" value="106"><span>동물</span></label>
+        </div></div>
+
+        <input type="submit" value="제출">
+
+        <input type="radio" name="media" value="1" /> youtube
+        <input type="radio" name="media" value="2" /> music
+        <input type="radio" name="media" value="3" /> movie
+    </form>
+</div>
+
+
+    <h1> {{profile.title}} </h1> 
+    <img src="{{profile.image.url}}">
+    <h1> {{profile.keyword}} </h1> 
+    <h1> {{profile.media}} </h1>
+    <h1> {{profile.url}} </h1>
+    <br><br>

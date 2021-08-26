@@ -101,6 +101,14 @@
 
 		})();
 
+		// function button_onclick(){
+		// 	var login = document.getElementById('login');
+		// 	hw.addEventListener('click', function() {
+		// 		count++;
+		// 		alert(count);
+		// }
+		
+
 	// Signup Form.
 		(function() {
 
@@ -133,6 +141,8 @@
 				$message._hide = function() {
 					$message.classList.remove('visible');
 				};
+
+
 
 			// Events.
 			// Note: If you're *not* using AJAX, get rid of this event listener.

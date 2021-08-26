@@ -11,4 +11,6 @@ urlpatterns = [
     path('keyword/', views.keyword, name='keyword'),
     path('success/', views.success, name='success'),
     path('joinsuccess/', views.joinsuccess, name='joinsuccess'),
-]
+    path('upload/', views.upload, name='upload'),
+    path('profile/', views.upload_create, name='upload_create'),
+] 
